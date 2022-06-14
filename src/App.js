@@ -1,9 +1,12 @@
-import logo from './logo.svg';
 import './App.css';
 import freeCodeCampLogo from "./imagenes/freeCodeCampLogo.svg"
 import Boton from './componentes/Boton.jsx';
+import Pantalla from './componentes/Pantalla';
+import BotonClear from './componentes/Boton-Clear';
+import { useState } from "react";
 
 function App() {
+  const [input, setInput] = useState("");
   return (
     <div className="App">
       <div className="freecodecamp-logo-contenedor">
@@ -14,6 +17,7 @@ function App() {
         />
       </div>
       <div className="contenedor-calculadora">
+        <Pantalla />
         <div className='fila'>
           <Boton>1</Boton>
           <Boton>2</Boton>
@@ -39,7 +43,7 @@ function App() {
           <Boton>/</Boton>
         </div>
         <div className='fila'>
-
+          <BotonClear>Clear</BotonClear>
         </div>
       </div>
     </div>
